@@ -30,20 +30,7 @@
     justify-content:center;
     align-items:center;
 }
-.glowy{
-    position:absolute;
-    width: 720px;
-    height:720px;
-    border-radius:50%;
-    background:radial-gradient(circle,
-    rgba(255,255,255,0.65)0%,
-    rgba(255,255,255,0.22)45%,
-    rgba(255,255,255,0)80%);
-    left:57%;
-    top:49%;
-    transform:translate(-50%,-50%);
-    z-index:1;
-}
+
 nav{
     position: relative;
     z-index:10;
@@ -99,6 +86,8 @@ nav{
     cursor:pointer;
     transition:0.3s;
     font-size:16px;
+    text-decoration:none;
+    display:inline-block;
 }
 .login-btnn:hover{
     background:white;
@@ -113,6 +102,8 @@ nav{
     cursor:pointer;
     transition:0.3s;
     font-size:16px;
+    text-decoration:none;
+    display:inline-block;
 }
 .signup-btnn:hover{
     background:#C98A42;
@@ -149,10 +140,7 @@ nav{
     width:520px;
     transition:0.3s;
     opacity:1;
-    filter:
-        contrast(1.15)
-        brightness(0.95)
-        drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+    
 }
 .LaptopImg img:hover{
     transform:scale(1.05);

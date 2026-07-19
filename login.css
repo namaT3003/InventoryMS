@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.wholeLoginPage{
+    min-height:100vh;
+    background-color:#F5EBDD;
+    position:relative;
+    overflow:hidden;
+}
+
+.backWarehouse{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background-image:url("images/warehouse.jpg");
+    background-size:cover;
+    background-position:center;
+
+    opacity:0.30;
+
+    z-index:0;
+}
+
+nav{
+    position:relative;
+    z-index:5;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background-color:#3B2417;
+
+    padding:22px 60px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:auto;
+}
+
+.logoWords h2{
+    color:white;
+    font-size:28px;
+    margin-bottom:3px;
+}
+
+.logoWords p{
+    color:#f2d7b5;
+    font-size:15px;
+}
+
+.navLinks{
+    display:flex;
+    gap:45px;
+}
+
+.navLinks a{
+    text-decoration:none;
+    color:white;
+    font-size:19px;
+    font-weight:600;
+}
+
+.navLinks a:hover{
+    color:#D8A15D;
+}
+
+.loginArea{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:calc(100vh - 104px);
+    position:relative;
+    z-index:2;
+}
+
+.loginBox{
+    width:400px;
+    background-color:#FFF8F1;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.loginBox h1{
+    color:#3B2417;
+    margin-bottom:10px;
+}
+
+.smallText{
+    color:#666;
+    margin-bottom:30px;
+    font-size:16px;
+}
+
+label{
+    display:block;
+    text-align:left;
+    margin-bottom:8px;
+    color:#3B2417;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #C7B8A6;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.logMeInBtn{
+    width:100%;
+    padding:13px;
+    background-color:#3B2417;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.logMeInBtn:hover{
+    background-color:#5A3825;
+}
+
+.goSignup{
+    margin-top:20px;
+    text-align:center;
+    color:#555;
+}
+
+.goSignup a{
+    color:#3B2417;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+input:focus{
+    outline:none;
+    border:2px solid #3B2417;
+}
