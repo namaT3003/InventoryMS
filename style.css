@@ -202,3 +202,10 @@ nav{
     color:black;
     line-height:1.5;
 }
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    background:#3B2417;
+    color:white;
+}
