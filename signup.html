@@ -9,66 +9,53 @@
 </head>
 
 <body>
-     <div class="wholeLoginPage">
-
+    <div class="wholeLoginPage">
         <div class="backWarehouse"></div>
 
-     <nav>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
 
-        <div class="logo">
-        <img src="images/logo.png" alt="logo">
+                <div class="logoWords">
+                    <h2>InvenList</h2>
+                    <p>Inventory Management System</p>
+                </div>
+            </div>
 
-            <div class="logoWords">
-            <h2>InvenList</h2>
-            <p>Inventory Management System</p>
+            <div class="navLinks">
+                <a href="index.html">Home</a>
+            </div>
+        </nav>
+
+        <div class="loginArea">
+            <div class="loginBox">
+                <h1>Create Account</h1>
+
+                <p class="smallText">
+                    Create your account to continue
+                </p>
+
+                <form id="myForm">
+                    <label for="nameBox">Full Name</label>
+                    <input type="text" id="nameBox" placeholder="Enter your name">
+
+                    <label for="mailBox">Email</label>
+                    <input type="email" id= "mailBox" placeholder="Enter your email">
+
+                    <label for="passBox">Password</label>
+                    <input type="password" id="passBox" placeholder="Enter your password">
+
+                    <button type="submit" class="logMeInBtn">Create Account</button>
+                </form>
+
+                <p class="goSignup">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
             </div>
         </div>
+    </div>
 
-         <div class="navLinks">
-             <a href="index.html">Home</a>
-         </div>
-
-     </nav>
-
-     <div class="loginArea">
-
-          <div class="loginBox">
-
-           <h1>Create Account</h1>
-           <p class="smallText">
-            Create your account to continue
-           </p>
-
-           <form id="myForm">
-
-            <label for="nameBox">Full Name</label>
-            <input type="text" id="nameBox" placeholder="Enter your name">
-
-            <label for="mailBox">Email</label>
-            <input type="email" id= "mailBox" placeholder="Enter your email">
-
-            <label for="passBox">Password</label>
-            <input type="password" id="passBox" placeholder="Enter your password">
-
-            <button type="submit" class="logMeInBtn">Create Account</button>
-
-           </form>
-
-           <p class="goSignup"> Already have an account?
-           <a href="login.html">Login</a>
-           </p>
-
-          </div>
-
-     </div>
-
-     </div>
-
-     <script src="signup.js"></script>
-
-     <p>
-        © 2026 InvenList | Developed by N.Tiwari
-    </p>
-
+    <script src="signup.js"></script>
 </body>
 </html>

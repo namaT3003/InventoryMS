@@ -9,186 +9,145 @@
 </head>
 
 <body>
-
     <nav>
+        <div class="logoPart">
+            <img src="images/logo.png" alt="logo">
 
-    <div class="logoPart">
-
-        <img src="images/logo.png" alt="logo">
-
-        <div class="logoWords">
-            <h2>InvenList</h2>
-            <p>Inventory Management System</p>
+            <div class="logoWords">
+                <h2>InvenList</h2>
+                <p>Inventory Management System</p>
+            </div>
         </div>
 
-    </div>
-
-    <button id="logoutButton" class="logoutBtn">
-        Logout
-    </button>
-
-</nav>
-
-<div class="wholeDashboard">
-
-    <div class="headingArea">
-
-    <h1 id="welcomeUser"></h1>
-
-    <p>
-        Manage your inventory from one place.
-    </p>
-
-</div>
-
-<div class="cardsArea">
-
-    <div class="oneCard">
-
-        <h3>Total Products</h3>
-
-        <h2 id="productCount">0</h2>
-
-    </div>
-
-    <div class="oneCard">
-
-        <h3>Low Stock</h3>
-
-        <h2 id="lowStock">0</h2>
-
-    </div>
-
-    <div class="oneCard">
-
-        <h3>Categories</h3>
-
-        <h2 id="categoryCount">0</h2>
-
-    </div>
-
-</div>
-
-<div id="stockAlert" class="stockAlert"></div>
-<div class="analyticsSection">
-
-    <div class="analyticsCard">
-        <h3>Total Inventory Value</h3>
-        <h2 id="inventoryValue">₹0</h2>
-    </div>
-
-    <div class="analyticsCard">
-        <h3>Average Price</h3>
-        <h2 id="averagePrice">₹0</h2>
-    </div>
-
-    <div class="analyticsCard">
-        <h3>Highest Stock</h3>
-        <h2 id="highestStock">-</h2>
-    </div>
-
-    <div class="analyticsCard">
-        <h3>Most Expensive</h3>
-        <h2 id="expensiveProduct">-</h2>
-    </div>
-
-</div>
-
-<div class="addProductBox">
-
-    <h2>Add New Product</h2>
-
-    <form id="productForm">
-
-        <input
-        type="text"
-        id="productName"
-        placeholder="Product Name">
-
-        <input
-        type="text"
-        id="productCategory"
-        placeholder="Category">
-
-        <input
-        type="number"
-        id="productQuantity"
-        placeholder="Quantity">
-
-        <input
-        type="number"
-        id="productPrice"
-        placeholder="Price">
-
-        <button type="submit">
-            Add New Product
+        <button id="logoutButton" class="logoutBtn">
+            Logout
         </button>
+    </nav>
 
-    </form>
+    <div class="wholeDashboard">
+        <div class="headingArea">
+            <h1 id="welcomeUser"></h1>
 
-</div>
+            <p>
+                Manage your inventory from one place.
+            </p>
+        </div>
 
-<div class="filterSection">
+        <div class="cardsArea">
+            <div class="oneCard">
+                <h3>Total Products</h3>
 
-    <input
-    type="text"
-    id="searchBox"
-    placeholder="Type to filter..."
->
+                <h2 id="productCount">0</h2>
+            </div>
 
-<select id="filterType">
+            <div class="oneCard">
+                <h3>Low Stock</h3>
 
-    <option value="name">Product Name</option>
+                <h2 id="lowStock">0</h2>
+            </div>
 
-    <option value="category">Category</option>
+            <div class="oneCard">
+                <h3>Categories</h3>
 
-    <option value="price">Price</option>
+                <h2 id="categoryCount">0</h2>
+            </div>
+        </div>
 
-    <option value="quantity">Quantity</option>
+        <div id="stockAlert" class="stockAlert"></div>
 
-</select>
+        <div class="analyticsSection">
+            <div class="analyticsCard">
+                <h3>Total Inventory Value</h3>
+                <h2 id="inventoryValue">₹0</h2>
+            </div>
 
-</div>
+            <div class="analyticsCard">
+                <h3>Average Price</h3>
+                <h2 id="averagePrice">₹0</h2>
+            </div>
 
-<div class="tableArea">
+            <div class="analyticsCard">
+                <h3>Highest Stock</h3>
+                <h2 id="highestStock">-</h2>
+            </div>
 
-    <h2>Products</h2>
+            <div class="analyticsCard">
+                <h3>Most Expensive</h3>
+                <h2 id="expensiveProduct">-</h2>
+            </div>
+        </div>
 
-    <table>
+        <div class="addProductBox">
+            <h2>Add New Product</h2>
 
-        <thead>
+            <form id="productForm">
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product Name">
 
-            <tr>
+                <input
+                    type="text"
+                    id="productCategory"
+                    placeholder="Category">
 
-                <th>Name</th>
+                <input
+                    type="number"
+                    id="productQuantity"
+                    placeholder="Quantity">
 
-                <th>Category</th>
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price">
 
-                <th>Quantity</th>
+                <button type="submit">
+                    Add New Product
+                </button>
+            </form>
+        </div>
 
-                <th>Price</th>
+        <div class="filterSection">
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="Type to filter...">
 
-                <th>Actions</th>
+            <select id="filterType">
+                <option value="name">Product Name</option>
 
-            </tr>
+                <option value="category">Category</option>
 
-        </thead>
+                <option value="price">Price</option>
 
-        <tbody id="tableBody">
+                <option value="quantity">Quantity</option>
+            </select>
+        </div>
 
-        </tbody>
+        <div class="tableArea">
+            <h2>Products</h2>
 
-    </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
 
-</div>
+                        <th>Category</th>
 
-</div>
+                        <th>Quantity</th>
 
-<script src="dashboard.js"></script>
+                        <th>Price</th>
 
-    <p>
-        © 2026 InvenList | Developed by N.Tiwari
-    </p>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
 
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
 </body>
 </html>

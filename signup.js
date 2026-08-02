@@ -2,69 +2,53 @@ let mySignupForm = document.getElementById("myForm");
 
 mySignupForm.addEventListener("submit", createAccount);
 
-async function createAccount(event){
-
+async function createAccount(event) {
     event.preventDefault();
 
     let nameValue = document.getElementById("nameBox").value;
     let emailValue = document.getElementById("mailBox").value;
     let passwordValue = document.getElementById("passBox").value;
 
-    if(nameValue === "" || emailValue === "" || passwordValue === ""){
-
+    if (nameValue === "" || emailValue === "" || passwordValue === "") {
         alert("Please fill all the fields.");
-
         return;
-
     }
 
     let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
 
-if(!passwordPattern.test(passwordValue)){
+    if (!passwordPattern.test(passwordValue)) {
+        alert(
+            "Password must contain:\n\n" +
+            "• At least 6 characters\n" +
+            "• One uppercase letter\n" +
+            "• One lowercase letter\n" +
+            "• One number"
+        );
 
-    alert(
-        "Password must contain:\n\n" +
-        "• At least 6 characters\n" +
-        "• One uppercase letter\n" +
-        "• One lowercase letter\n" +
-        "• One number"
-    );
+        return;
+    }
 
-    return;
+    let answer = await fetch("http://localhost:5000/signup", {
+        method: "POST",
 
-}
-
-    let answer = await fetch("http://localhost:5000/signup",{
-
-        method:"POST",
-
-        headers:{
-            "Content-Type":"application/json"
+        headers: {
+            "Content-Type": "application/json"
         },
 
-        body:JSON.stringify({
-
-            fullName:nameValue,
-            email:emailValue,
-            password:passwordValue
-
+        body: JSON.stringify({
+            fullName: nameValue,
+            email: emailValue,
+            password: passwordValue
         })
-
     });
 
-    if(answer.ok){
-
+    if (answer.ok) {
         alert("Account Created Successfully!");
 
         window.location.href = "login.html";
-
-    }
-    else{
-
+    } else {
         let message = await answer.text();
 
         alert(message);
-
     }
-
 }
